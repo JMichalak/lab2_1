@@ -52,5 +52,16 @@ public class BinarySearchTest {
         
     }
     
+    @Test
+    public void test2(){
+        int key = 5;
+        int[] seq = new int[]{3};
+        SearchResult result;
+        BinarySearch binarySearch = new BinarySearch();
+        result = binarySearch.search(key,seq);
+        boolean expResult = true;
+        int i = result.getPosition();
+        assertEquals(expResult, (!result.isFound() && result.getPosition()==-1) );
+    }
     
 }
