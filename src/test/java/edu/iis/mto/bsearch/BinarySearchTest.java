@@ -76,4 +76,15 @@ public class BinarySearchTest {
         assertEquals(expResult, (result.isFound() && seq[i-1]==key));
     }
     
+    @Test
+    public void test4(){
+        int key = 8;
+        int[] seq = new int[]{5,6,7,8};
+        SearchResult result;
+        
+        result = BinarySearch.search(key,seq);
+        boolean expResult = true;
+        int i = result.getPosition();
+        assertEquals(expResult, (result.isFound() && seq[i-1]==key));
+    }
 }
